@@ -3,13 +3,14 @@ import java.util.Scanner;
 
 public class CoinToss 
 {
-    public state void main (String[] args)
+    public static void main (String[] args)
     {
 
         Random random = new Random();
-        int toss = random.nextInt(2);
+        
         int heads = 0;
         int tails = 0;
+    
         
         Scanner sc = new Scanner(System.in);
 
@@ -20,18 +21,31 @@ public class CoinToss
 
         for (int i = 0; i < tossAmount; i++)
         {
+            int toss = random.nextInt(2);
+
             if (toss == 0)
             {
-                System.out.println("Heads");   
+                heads++;   
 
             } 
             else
             {
-                System.out.println("Tails");
+                tails++;
                 
             }
-            
+
         }
+        
+
+        System.out.println("Total tosses: " + tossAmount);
+
+        System.out.println("Heads: " + heads);
+        
+        System.out.println("Tails: " + tails);
+
+
+
+
 
 
 
