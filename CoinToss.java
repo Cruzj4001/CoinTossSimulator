@@ -8,16 +8,29 @@ public class CoinToss
 
         Random random = new Random();
         int toss = random.nextInt(2);
+        int heads = 0;
+        int tails = 0;
+        
+        Scanner sc = new Scanner(System.in);
 
-        if (toss == 0)
+        System.out.println("How many times would you like to toss the coin?");
+
+        int tossAmount = sc.nextInt();
+
+
+        for (int i = 0; i < tossAmount; i++)
         {
-            System.out.println("Heads");
+            if (toss == 0)
+            {
+                System.out.println("Heads");   
 
-        } 
-        else
-        {
-            System.out.println("Tails");
-
+            } 
+            else
+            {
+                System.out.println("Tails");
+                
+            }
+            
         }
 
 
