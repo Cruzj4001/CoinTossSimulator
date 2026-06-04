@@ -31,6 +31,38 @@ public class CoinToss
 
             int tossAmount = sc.nextInt();
 
+            System.out.println("Which coin would you like to use?");
+
+            Scanner coinChoice = new Scanner(System.in);
+
+            System.out.println("1. Penny");
+            System.out.println("2. Nickel");
+            System.out.println("3. Dime");
+            System.out.println("4. Quarter");
+
+            int coin = coinChoice.nextInt();
+
+            if (coin == 1)
+            {
+                System.out.println("Coin used: Penny");
+            }
+            else if (coin == 2)
+            {
+                System.out.println("Coin used: Nickel");
+            }
+            else if (coin == 3)
+            {
+                System.out.println("Coin used: Dime");
+            }
+            else if (coin == 4)
+            {
+                System.out.println("Coin used: Quarter");
+            }
+            else
+            {
+                System.out.println("Input is not valid.");
+            }
+
 
             for (int i = 0; i < tossAmount; i++)
             {
@@ -48,6 +80,7 @@ public class CoinToss
                 }
 
             }
+
 
 
             System.out.println("Total tosses: " + tossAmount);
