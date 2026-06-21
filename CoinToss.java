@@ -31,6 +31,8 @@ public class CoinToss
 
             int tossAmount = sc.nextInt();
 
+            System.out.println("Heads wins the bet.");
+
             System.out.println("Which coin would you like to use?");
 
             Scanner coinChoice = new Scanner(System.in);
@@ -40,28 +42,11 @@ public class CoinToss
             System.out.println("3. Dime");
             System.out.println("4. Quarter");
 
-            int coin = coinChoice.nextInt();
-
-            if (coin == 1)
-            {
-                System.out.println("Coin used: Penny");
-            }
-            else if (coin == 2)
-            {
-                System.out.println("Coin used: Nickel");
-            }
-            else if (coin == 3)
-            {
-                System.out.println("Coin used: Dime");
-            }
-            else if (coin == 4)
-            {
-                System.out.println("Coin used: Quarter");
-            }
-            else
-            {
-                System.out.println("Input is not valid.");
-            }
+            double penny = 0.01;
+            double nickel = 0.05;
+            double dime = 0.10;
+            double quarter = 0.25;
+            double prize_pot = 0;
 
 
             for (int i = 0; i < tossAmount; i++)
@@ -82,12 +67,44 @@ public class CoinToss
             }
 
 
+            int coin = coinChoice.nextInt();
+
+            if (coin == 1)
+            {
+                prize_pot = (penny * heads) - (penny * tails);
+                System.out.println("Coin used: Penny");
+            }
+            else if (coin == 2)
+            {
+                prize_pot = (nickel * heads) - (nickel * tails);
+                System.out.println("Coin used: Nickel");
+            }
+            else if (coin == 3)
+            {
+                prize_pot = (dime * heads) - (dime * tails);
+                System.out.println("Coin used: Dime");
+            }
+            else if (coin == 4)
+            {
+                prize_pot = (quarter * heads) - (quarter * tails);
+                System.out.println("Coin used: Quarter");
+            }
+            else
+            {
+                System.out.println("Input is not valid.");
+            }
+
+            
+
+
 
             System.out.println("Total tosses: " + tossAmount);
 
             System.out.println("Heads: " + heads);
         
             System.out.println("Tails: " + tails);
+
+            System.out.println("You walk away with: $" + prize_pot);
 
 
         }
