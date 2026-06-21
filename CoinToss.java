@@ -49,24 +49,6 @@ public class CoinToss
             double prize_pot = 0;
 
 
-            for (int i = 0; i < tossAmount; i++)
-            {
-                int toss = random.nextInt(2);
-
-                if (toss == 0)
-                {
-                   heads++;   
-
-                } 
-                else
-                {
-                    tails++;
-                
-                }
-
-            }
-
-
             int coin = coinChoice.nextInt();
 
             if (coin == 1)
@@ -92,6 +74,24 @@ public class CoinToss
             else
             {
                 System.out.println("Input is not valid.");
+            }
+
+
+            for (int i = 0; i < tossAmount; i++)
+            {
+                int toss = random.nextInt(2);
+
+                if (toss == 0)
+                {
+                   heads++;   
+
+                } 
+                else
+                {
+                    tails++;
+                
+                }
+
             }
 
             
