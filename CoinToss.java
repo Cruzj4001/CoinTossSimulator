@@ -27,13 +27,13 @@ public class CoinToss
         
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("How many times would you like to toss the coin?");
+            System.out.println("\nHow many times would you like to toss the coin?");
 
             int tossAmount = sc.nextInt();
 
-            System.out.println("Heads wins the bet.");
+            System.out.println("\nHeads wins the bet.");
 
-            System.out.println("Which coin would you like to use?");
+            System.out.println("\nWhich coin would you like to use?");
 
             Scanner coinChoice = new Scanner(System.in);
 
@@ -47,34 +47,6 @@ public class CoinToss
             double dime = 0.10;
             double quarter = 0.25;
             double prize_pot = 0;
-
-
-            int coin = coinChoice.nextInt();
-
-            if (coin == 1)
-            {
-                prize_pot = (penny * heads) - (penny * tails);
-                System.out.println("Coin used: Penny");
-            }
-            else if (coin == 2)
-            {
-                prize_pot = (nickel * heads) - (nickel * tails);
-                System.out.println("Coin used: Nickel");
-            }
-            else if (coin == 3)
-            {
-                prize_pot = (dime * heads) - (dime * tails);
-                System.out.println("Coin used: Dime");
-            }
-            else if (coin == 4)
-            {
-                prize_pot = (quarter * heads) - (quarter * tails);
-                System.out.println("Coin used: Quarter");
-            }
-            else
-            {
-                System.out.println("Input is not valid.");
-            }
 
 
             for (int i = 0; i < tossAmount; i++)
@@ -94,7 +66,33 @@ public class CoinToss
 
             }
 
-            
+
+            int coin = coinChoice.nextInt();
+
+            if (coin == 1)
+            {
+                prize_pot = (penny * heads) - (penny * tails);
+                System.out.println("\nCoin used: Penny");
+            }
+            else if (coin == 2)
+            {
+                prize_pot = (nickel * heads) - (nickel * tails);
+                System.out.println("\nCoin used: Nickel");
+            }
+            else if (coin == 3)
+            {
+                prize_pot = (dime * heads) - (dime * tails);
+                System.out.println("\nCoin used: Dime");
+            }
+            else if (coin == 4)
+            {
+                prize_pot = (quarter * heads) - (quarter * tails);
+                System.out.println("\nCoin used: Quarter");
+            }
+            else
+            {
+                System.out.println("Input is not valid.");
+            }
 
 
 
@@ -104,8 +102,7 @@ public class CoinToss
         
             System.out.println("Tails: " + tails);
 
-            System.out.println("You walk away with: $" + prize_pot);
-
+            System.out.printf("\nYou walk away with: $%.2f\n", prize_pot);
 
         }
         else if (choice == 2)
