@@ -102,6 +102,8 @@ public class CoinToss
         
             System.out.println("Tails: " + tails);
 
+            System.out.println("\nHeads to Tails Ratio: " + heads + ":" + tails);
+
             System.out.printf("\nYou walk away with: $%.2f\n", prize_pot);
 
         }
